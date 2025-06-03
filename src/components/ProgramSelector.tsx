@@ -29,6 +29,7 @@ export const ProgramSelector: React.FC<ProgramSelectorProps> = ({
         label="Program"
         onChange={handleChange}
         sx={{
+          textAlign: 'left',
           '& .MuiSelect-select': {
             py: 1.5,
           },
@@ -48,6 +49,7 @@ export const ProgramSelector: React.FC<ProgramSelectorProps> = ({
             key={program.code} 
             value={program.code}
             sx={{
+              textAlign: 'left',
               '&.Mui-selected': {
                 backgroundColor: 'primary.light',
                 color: 'white',

@@ -114,18 +114,6 @@ function App() {
     };
   }, [courses]);
 
-  // Get all courses up to the selected year
-  const relevantCourses = useMemo(() => {
-    if (!selectedProgram) return [];
-    
-    const allCourses: Course[] = [];
-    for (let year = 1; year <= selectedYear; year++) {
-      const yearCourses = SAMPLE_COURSES[selectedProgram.code]?.[year] || [];
-      allCourses.push(...yearCourses);
-    }
-    return allCourses;
-  }, [selectedProgram, selectedYear]);
-
   const handleEducationTypeChange = (event: SelectChangeEvent<string>) => {
     const type = event.target.value;
     setSelectedEducationType(type);
@@ -253,10 +241,11 @@ function App() {
                   p: { xs: 2, sm: 3, md: 4 },
                   mb: 4,
                   background: 'linear-gradient(to bottom, #FFFFFF, #FAFBFF)',
+                  textAlign: 'left'
                 }}
               >
                 <Box sx={{ mb: 3 }}>
-                  <FormControl fullWidth sx={{ mb: 3 }}>
+                  <FormControl fullWidth sx={{ mb: 3, textAlign: 'left' }}>
                     <InputLabel id="education-type-label">Utbildning</InputLabel>
                     <Select
                       labelId="education-type-label"
@@ -264,6 +253,7 @@ function App() {
                       value={selectedEducationType}
                       label="Utbildning"
                       onChange={handleEducationTypeChange}
+                      sx={{ textAlign: 'left' }}
                     >
                       <MenuItem value=""><em>Välj utbildning</em></MenuItem>
                       <MenuItem value="civilingenjör">Civilingenjör</MenuItem>
@@ -289,6 +279,7 @@ function App() {
                         value={selectedYear}
                         label="Årskurs"
                         onChange={handleYearChange}
+                        sx={{ textAlign: 'left' }}
                       >
                         <MenuItem value={0}><em>Välj årskurs</em></MenuItem>
                         {Array.from({ length: 3 }, (_, i) => i + 1).map(
@@ -429,7 +420,7 @@ function App() {
                   <Typography variant="subtitle2" color="primary" sx={{ mb: 1 }}>
                     Studietips
                   </Typography>
-                  <Typography variant="body2" color="text.secondary" component="ul" sx={{ pl: 2 }}>
+                  <Typography variant="body2" color="text.secondary" component="ul" sx={{ pl: 2, textAlign: 'left' }}>
                     <li>Delta aktivt på föreläsningar, övningar och laborationer.</li>
                     <li>Utnyttja skolans resurser såsom kurslitteratur och kurs-assistenter.</li>
                     <li>Studera tillsammans med vänner.</li>
@@ -440,7 +431,7 @@ function App() {
                   <Typography variant="subtitle2" color="primary" sx={{ mb: 1 }}>
                     Planering
                   </Typography>
-                  <Typography variant="body2" color="text.secondary" component="ul" sx={{ pl: 2 }}>
+                  <Typography variant="body2" color="text.secondary" component="ul" sx={{ pl: 2, textAlign: 'left' }}>
                     <li>Planera din tid väl för att hinna med ett liv utanför studierna.</li>
                     <li>Stressa inte för mycket över dina studier.</li>
                     <li>Sätt realistiska mål.</li>

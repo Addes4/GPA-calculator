@@ -1,4 +1,4 @@
-import type { Program, Course, Education } from '../types';
+import type { Course, Education } from '../types';
 
 export const KTH_EDUCATION: Education[] = [
   {
