@@ -2,7 +2,7 @@ export interface Course {
   code: string;
   name: string;
   credits: number;
-  grade?: 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | '';
+  grade?: string;
   year: number;
 }
 
@@ -12,10 +12,16 @@ export interface Program {
   years: number;
 }
 
-export interface Year {
-  year: number;
-  courses: Course[];
-}
+export type Year = {
+  [key: number]: Course[];
+};
+
+export type EducationType = 'civilingenjör' | 'högskoleingenjör' | 'kandidatprogram';
+
+export type Education = {
+  type: EducationType;
+  programs: Program[];
+};
 
 export interface StudentProgress {
   program: Program;

@@ -1,4 +1,4 @@
-import type { Course, Education } from '../types';
+import type { Course, Education } from '../types/index';
 
 export const KTH_EDUCATION: Education[] = [
   {
@@ -36,12 +36,12 @@ export const KTH_EDUCATION: Education[] = [
       },
       {
         code: 'CSAMH',
-        name: 'Arkitektur',
+        name: 'Samhällsbyggnad',
         years: 5,
       },
       {
         code: 'CMAST',
-        name: 'Matematik',
+        name: 'Maskinteknik',
         years: 5,
       },
       {
@@ -50,41 +50,155 @@ export const KTH_EDUCATION: Education[] = [
         years: 5,
       },
       {
-        code: 'COPEN',
+        code: 'CLGYM',
         name: 'Civilingenjör och lärare',
         years: 5,
-      }
+      },
+      {
+        code: 'CMEDT',
+        name: 'Medicinsk teknik',
+        years: 5,
+      },
+      {
+        code: 'CTKEM',
+        name: 'Teknisk kemi',
+        years: 5,
+      },
+      {
+        code: 'CFATE',
+        name: 'Farkostteknik',
+        years: 5,
+      },
+      {
+        code: 'CITEH',
+        name: 'Industriell teknik och hållbarhet',
+        years: 5,
+      },
+      {
+        code: 'CINTE',
+        name: 'Informations- och kommunikationsteknik',
+        years: 5,
+      },
+      {
+        code: 'CMATD',
+        name: 'Materialdesign',
+        years: 5,
+      },      
+      {
+        code: 'CMEDT',
+        name: 'Medicinsk teknik',
+        years: 5,
+      },
+      {
+        code: 'CTMAT',
+        name: 'Teknisk matematik',
+        years: 5,
+      },
+      {
+        code: 'CENMI',
+        name: 'Energi och miljö',
+        years: 5,
+      },
     ]
   },
   {
     type: 'högskoleingenjör',
-    programs: []
+    programs: [
+      {
+        code: 'TIBYH',
+        name: 'Byggteknik och design',
+        years: 3,
+      },
+      {
+        code: 'TIDAB',
+        name: 'Datateknik',
+        years: 3,
+      },
+      {
+        code: 'TIDAA',
+        name: 'Datateknik, Flemingsberg',
+        years: 3,
+      },
+      {
+        code: 'TIEDB',
+        name: 'Elektronik och datorteknik',
+        years: 3,
+      },
+      {
+        code: 'TIELA',
+        name: 'Elektroteknik, Flemingsberg',
+        years: 3,
+      },
+      {
+        code: 'TINTE',
+        name: 'Industriell teknik',
+        years: 3,
+      },
+      {
+        code: 'TIKED',
+        name: 'Kemiteknik',
+        years: 3,
+      },
+      {
+        code: 'TIMEL',
+        name: 'Medicinsk teknik',
+        years: 3,
+      },
+      {
+        code: 'TITEH',
+        name: 'Teknik och ekonomi',
+        years: 3,
+      },
+    ]
   },
   {
     type: 'kandidatprogram',
-    programs: []
-  }
+    programs: [
+      {
+        code: 'TFOTK',
+        name: 'Fastighet och finans',
+        years: 3,
+      },
+      {
+        code: 'TFAFK',
+        name: 'Fastighetsutveckling med fastighetsförmedling',
+        years: 3,
+      },
+      {
+        code: 'TCOMK',
+        name: 'Informations- och kommunikationsteknik',
+        years: 3,
+      },
+    ]
+  },
+  
 ];
 
 export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
   'CDATE': {
     1: [
       {
-        code: 'DD1331',
-        name: 'Grundläggande Programmering',
-        credits: 5.0,
+        code: 'DA1600',
+        name: 'Ingenjörsmässigt skrivande',
+        credits: 4.5,
         year: 1
       },
       {
-        code: 'SF1625',
-        name: 'Envariabelanalys',
-        credits: 7.5,
+        code: 'DD1337',
+        name: 'Programmering',
+        credits: 7.0,
         year: 1
       },
       {
-        code: 'DD1301',
-        name: 'Datorintroduktion',
-        credits: 7.5,
+        code: 'DD1338',
+        name: 'Algoritmer och datastrukturer',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'DD1390',
+        name: 'Programsammanhållande kurs i datateknik',
+        credits: 6.0,
         year: 1
       },
       {
@@ -94,8 +208,32 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'DD1337',
-        name: 'Programmering',
+        code: 'SF1671',
+        name: 'Matematik, baskurs, med diskret matematik',
+        credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'DD1349',
+        name: 'Projektuppgift i introduktion till datalogi',
+        credits: 3.0,
+        year: 1
+      },
+      {
+        code: 'DD1396',
+        name: 'Parallellprogrammering i introduktion till datalogi',
+        credits: 3.0,
+        year: 1
+      },
+      {
+        code: 'DH1623',
+        name: ' Människa-datorinteraktion, grundläggande teori',
+        credits: 4.5,
+        year: 1
+      },
+      {
+        code: 'SF1625',
+        name: 'Envariabelanalys',
         credits: 7.5,
         year: 1
       },
@@ -105,26 +243,8 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         credits: 7.5,
         year: 1
       },
-      {
-        code: 'IK1203',
-        name: 'Nätverk och Kommunikation',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'IS1200',
-        name: 'Datorteknik',
-        credits: 7.5,
-        year: 1
-      }
     ],
     2: [
-      {
-        code: 'DD1338',
-        name: 'Algoritmer och Datastrukturer',
-        credits: 7.5,
-        year: 2
-      },
       {
         code: 'SF1514',
         name: 'Numeriska Metoder',
@@ -356,21 +476,33 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
   'CTFYS': {
     1: [
       {
+        code: 'DD1331',
+        name: 'Grundläggande programmering',
+        credits: 5.0,
+        year: 1
+      },
+      {
+        code: 'SF1672',
+        name: 'Linjär algebra',
+        credits: 7.5,
+        year: 1
+      },
+      {
         code: 'SF1673',
-        name: 'Analys i En Variabel',
+        name: 'Analys i en variabel',
         credits: 7.5,
         year: 1
       },
       {
         code: 'SI1121',
-        name: 'Fysik I',
-        credits: 7.5,
+        name: 'Termodynamik',
+        credits: 6.0,
         year: 1
       },
       {
-        code: 'DD1331',
-        name: 'Grundläggande Programmering',
-        credits: 5.0,
+        code: 'SK1104',
+        name: 'Klassisk fysik',
+        credits: 7.5,
         year: 1
       },
       {
@@ -380,132 +512,114 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'SI1122',
-        name: 'Fysik II',
-        credits: 7.5,
+        code: 'SF1922',
+        name: 'Sannolikhetsteori och statistik',
+        credits: 6.0,
         year: 1
       },
       {
-        code: 'SF1624',
-        name: 'Algebra och Geometri',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'SG1113',
+        code: 'SG1112',
         name: 'Mekanik I',
-        credits: 7.5,
+        credits: 9.0,
         year: 1
       },
       {
-        code: 'SK1108',
-        name: 'Klassisk Fysik',
-        credits: 7.5,
+        code: 'SK1105',
+        name: 'Experimentell fysik',
+        credits: 4.0,
         year: 1
       }
     ],
     2: [
       {
-        code: 'SF1544',
-        name: 'Numeriska Metoder, Grundkurs',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SI1140',
-        name: 'Modern Fysik',
-        credits: 9.0,
-        year: 2
-      },
-      {
-        code: 'SF1683',
-        name: 'Differentialekvationer och Transformer',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1682',
-        name: 'Komplex Analys',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SH1014',
-        name: 'Modern Fysik',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1628',
-        name: 'Komplex Analys',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SI1155',
-        name: 'Teoretisk Fysik',
+        code: 'DD1327',
+        name: 'Grundläggande datalogi',
         credits: 6.0,
         year: 2
       },
       {
-        code: 'SK1109',
-        name: 'Klassisk Fysik II',
-        credits: 7.5,
+        code: 'SE1055',
+        name: 'Hållfasthetslära, grundkurs med energimetoder',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'SF1544',
+        name: 'Numeriska metoder, grundkurs IV',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SF1681',
+        name: 'Linjär algebra, fortsättningskurs',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SF1683',
+        name: 'Differentialekvationer och transformmetoder',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'SG1113',
+        name: 'Mekanik, fortsättningskurs',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SH1014',
+        name: 'Modern fysik',
+        credits: 4.0,
+        year: 2
+      },
+      {
+        code: 'SI1146',
+        name: 'Vektoranalys',
+        credits: 4.0,
+        year: 2
+      },
+      {
+        code: 'SI1155',
+        name: 'Teoretisk fysik',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SI1200',
+        name: 'Fysikens matematiska metoder',
+        credits: 4.0,
         year: 2
       }
     ],
     3: [
       {
-        code: 'SI1336',
-        name: 'Klassisk Mekanik, Fortsättningskurs',
-        credits: 7.5,
+        code: 'EI1320',
+        name: 'Teoretisk elektroteknik',
+        credits: 9.0,
         year: 3
       },
       {
-        code: 'SI1337',
-        name: 'Elektromagnetism och Vågor',
-        credits: 7.5,
+        code: 'EL1000',
+        name: 'Reglerteknik, allmän kurs',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'SI1338',
-        name: 'Kvantfysik',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'SI1339',
-        name: 'Statistisk Fysik',
-        credits: 7.5,
+        code: 'SG1218',
+        name: 'Strömningsmekanik',
+        credits: 4.0,
         year: 3
       },
       {
         code: 'SH1015',
-        name: 'Projekt i Fysik',
-        credits: 7.5,
+        name: 'Tillämpad modern fysik',
+        credits: 5.0,
         year: 3
       },
       {
-        code: 'SF1687',
-        name: 'Matematiska Metoder inom Fysik',
-        credits: 12.0,
-        year: 3
-      },
-      {
-        code: 'SK2758',
-        name: 'Fasta Tillståndets Fysik',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'EJ1200',
-        name: 'Elkraftsystem',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'ME1003',
-        name: 'Industriell ekonomi, grundkurs',
+        code: 'SI1336',
+        name: 'Simulering och modellering',
         credits: 6.0,
         year: 3
       }
@@ -520,15 +634,33 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'EI1110',
-        name: 'Elkretsanalys, Utökad Kurs',
+        code: 'SF1624',
+        name: 'Algebra och geometri',
         credits: 7.5,
         year: 1
       },
       {
-        code: 'DD1331',
-        name: 'Grundläggande Programmering',
-        credits: 5.0,
+        code: 'EH1110',
+        name: 'Elektroteknikens betydelse för ett modernt samhälle',
+        credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'DD1310',
+        name: 'Programmeringsteknik',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'IE1205',
+        name: 'Digital design',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'EI1110',
+        name: 'Elkretsanalys, utökad kurs',
+        credits: 9.0,
         year: 1
       },
       {
@@ -538,114 +670,96 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'EI1220',
-        name: 'Digital Design',
-        credits: 7.5,
+        code: 'EP1200',
+        name: 'Introduktion till datorsystemteknik',
+        credits: 6.0,
         year: 1
       },
       {
-        code: 'SF1624',
-        name: 'Algebra och Geometri',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'EI1110',
-        name: 'Elektroniksystem',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'EL1110',
-        name: 'Elektroteknik, Grundkurs',
+        code: 'EH1010',
+        name: 'Elektroprojekt',
         credits: 7.5,
         year: 1
       }
     ],
     2: [
       {
+        code: 'ED1110',
+        name: 'Vektoranalys',
+        credits: 4.5,
+        year: 2
+      },
+      {
+        code: 'EH1110',
+        name: 'Elektroteknikens betydelse för ett modernt samhälle',
+        credits: 7.5,
+        year: 2
+      },
+      {
         code: 'EI1220',
-        name: 'Digital Design',
-        credits: 7.5,
+        name: 'Teoretisk elektroteknik E',
+        credits: 10.5,
         year: 2
       },
       {
-        code: 'SF1544',
-        name: 'Numeriska Metoder, Grundkurs',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'EL1120',
-        name: 'Elteknikens Grunder',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1633',
-        name: 'Differentialekvationer I',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'EI1240',
-        name: 'Elektromagnetisk Fältteori',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'EL1130',
-        name: 'Elektronik och Mätteknik',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1901',
-        name: 'Sannolikhetsteori och Statistik',
+        code: 'EN1020',
+        name: 'Elektroprojekt, del II',
         credits: 6.0,
         year: 2
       },
       {
         code: 'EQ1110',
-        name: 'Signaler och System',
+        name: 'Tidskontinuerliga signaler och system',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SF1920',
+        name: 'Sannolikhetsteori och statistik',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SK1108',
+        name: 'Klassisk fysik, mekanik och våg',
         credits: 7.5,
+        year: 2
+      },
+      {
+        code: 'EQ1120',
+        name: 'Tidsdiskreta signaler och system',
+        credits: 6.0,
         year: 2
       }
     ],
     3: [
       {
-        code: 'EI1320',
-        name: 'Kommunikationssystem',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'EL1150',
-        name: 'Kraftelektronik',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'EQ1120',
-        name: 'Reglerteknik',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'EI1330',
-        name: 'Mikrovågsteknik',
-        credits: 7.5,
-        year: 3
-      },
-      {
         code: 'EJ1200',
-        name: 'Elkraftsystem',
-        credits: 7.5,
+        name: 'Eleffektsystem',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'ME1003',
-        name: 'Industriell ekonomi, grundkurs',
+        code: 'EK1191',
+        name: 'Mätteknik',
+        credits: 6.0,
+        year: 3
+      },
+      {
+        code: 'EL1020',
+        name: 'Reglerteknik, allmän kurs',
+        credits: 6.0,
+        year: 3
+      },
+      {
+        code: 'EQ1270',
+        name: 'Stokastiska signaler och system',
+        credits: 6.0,
+        year: 3
+      },
+      {
+        code: 'IE1207',
+        name: 'Analog Elektronik',
         credits: 6.0,
         year: 3
       }
@@ -654,9 +768,27 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
   'CBIOT': {
     1: [
       {
-        code: 'BB1010',
-        name: 'Introduktion till Bioteknik',
+        code: 'BB1150',
+        name: 'Biokemi 1',
         credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'BB1160',
+        name: 'Eukaryot cellbiologi',
+        credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'CB1170',
+        name: 'Bioteknik för ett hållbart samhälle',
+        credits: 1.5,
+        year: 1
+      },
+      {
+        code: 'KD1020',
+        name: 'Inledande kemi',
+        credits: 6.0,
         year: 1
       },
       {
@@ -666,115 +798,133 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'KD1020',
-        name: 'Allmän Kemi',
+        code: 'BB1030',
+        name: 'Mikrobiologi',
+        credits: 9.0,
+        year: 1
+      },
+      {
+        code: 'BB1190',
+        name: 'Genteknik',
+        credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'KD1230',
+        name: 'Organisk kemi, grundläggande koncept och praktik',
         credits: 6.0,
         year: 1
       },
       {
-        code: 'SF1626',
-        name: 'Flervariabelanalys',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'BB1030',
-        name: 'Mikrobiologi',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'KD1090',
-        name: 'Organisk Kemi',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'BB1160',
-        name: 'Eukaryot Cellbiologi',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'BB1170',
-        name: 'Ingenjörsfärdigheter inom Life Science',
+        code: 'KE1180',
+        name: 'Inledande kemiteknik',
         credits: 7.5,
         year: 1
       }
     ],
     2: [
       {
-        code: 'BB1190',
-        name: 'Genteknik',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'KD1510',
-        name: 'Kemisk Analys',
-        credits: 7.5,
-        year: 2
-      },
-      {
         code: 'BB1200',
-        name: 'Biokemi',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1901',
-        name: 'Sannolikhetsteori och Statistik',
+        name: 'Analys av biomolekyler',
         credits: 6.0,
         year: 2
       },
       {
         code: 'BB1210',
-        name: 'Rening av Biomolekyler',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'BB1220',
-        name: 'Projekt i Bioteknik',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'KD1070',
-        name: 'Molekylär Struktur',
-        credits: 7.5,
+        name: 'Rening av biomolekyler',
+        credits: 6.0,
         year: 2
       },
       {
         code: 'BB1230',
-        name: 'Processbioteknik',
+        name: 'Biokemi 2',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'CB1015',
+        name: 'Hållbar utveckling av bioteknik',
+        credits: 4.0,
+        year: 2
+      },
+      {
+        code: 'CB1050',
+        name: 'Python för bioteknologi',
         credits: 7.5,
+        year: 2
+      },
+      {
+        code: 'CB1180',
+        name: 'Färdigheter för framtidens ingenjörer 1',
+        credits: 1.5,
+        year: 2
+      },
+      {
+        code: 'CB1190',
+        name: 'Färdigheter för framtidens ingenjörer 2',
+        credits: 1.5,
+        year: 2
+      },
+      {
+        code: 'CK1285',
+        name: 'Kemisk jämvikt',
+        credits: 5.0,
+        year: 2
+      },
+      {
+        code: 'SF1525',
+        name: 'Grundkurs i numeriska metoder',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SF1624',
+        name: 'Algebra och geometri',
+        credits: 7.5,
+        year: 2
+      },
+      {
+        code: 'SK1150',
+        name: 'Grundläggande fysik I',
+        credits: 9.0,
         year: 2
       }
     ],
     3: [
       {
-        code: 'BB1240',
-        name: 'Tillämpad Genteknik',
+        code: 'BB1300',
+        name: 'Odlingsteknologi',
         credits: 7.5,
         year: 3
       },
       {
-        code: 'BB1250',
-        name: 'Proteomik',
+        code: 'CB1020',
+        name: 'Projekt i matematisk modellering',
+        credits: 3.0,
+        year: 3
+      },
+      {
+        code: 'CB1200',
+        name: 'Färdigheter för framtidens ingenjörer 3',
+        credits: 1.5,
+        year: 3
+      },
+      {
+        code: 'KD1500',
+        name: 'Fysikalisk biokemi',
         credits: 7.5,
         year: 3
       },
       {
-        code: 'BB1260',
-        name: 'Cellulär Bioteknik',
-        credits: 7.5,
+        code: 'SF1911',
+        name: 'Statistik för bioteknik',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'BB1270',
-        name: 'Miljöbioteknik',
-        credits: 7.5,
+        code: 'SI1410',
+        name: 'Grundläggande modellering inom bioteknologi',
+        credits: 6.0,
         year: 3
       }
     ]
@@ -782,21 +932,39 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
   'CINEK': {
     1: [
       {
+        code: 'DD1317',
+        name: 'Programmeringsteknik',
+        credits: 7.5,
+        year: 1
+      },
+      {
+        code: 'ME1314',
+        name: 'Introduktion till industriell ekonomi',
+        credits: 9.0,
+        year: 1
+      },
+      {
+        code: 'SF1624',
+        name: 'Algebra och geometri',
+        credits: 7.5,
+        year: 1
+      },
+      {
         code: 'SF1625',
         name: 'Envariabelanalys',
         credits: 7.5,
         year: 1
       },
       {
-        code: 'ME1003',
-        name: 'Industriell Ekonomi, Grundkurs',
-        credits: 6.0,
+        code: 'ME1306',
+        name: 'Industriell projektledning för I',
+        credits: 7.5,
         year: 1
       },
       {
-        code: 'DD1331',
-        name: 'Grundläggande Programmering',
-        credits: 5.0,
+        code: 'ME1315',
+        name: 'Industriell marknadsföring för I',
+        credits: 6.0,
         year: 1
       },
       {
@@ -806,77 +974,47 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'ME1004',
-        name: 'Industriell Ekonomi och Organisation',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'SF1624',
-        name: 'Algebra och Geometri',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'ME1005',
-        name: 'Projektledning',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'ME1006',
-        name: 'Företagsekonomi',
-        credits: 7.5,
+        code: 'SG1109',
+        name: 'Mekanik',
+        credits: 8.0,
         year: 1
       }
     ],
     2: [
       {
-        code: 'ME2015',
-        name: 'Projektledning: Ledarskap och Styrning',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'ME2016',
-        name: 'Investeringsanalys',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1901',
-        name: 'Sannolikhetsteori och Statistik',
+        code: 'ME1308',
+        name: 'Industriell verksamhetsledning för I',
         credits: 6.0,
         year: 2
       },
       {
-        code: 'ME2017',
-        name: 'Ekonomistyrning',
-        credits: 7.5,
+        code: 'ME1309',
+        name: 'Industriell ekonomistyrning för I',
+        credits: 6.0,
         year: 2
       },
       {
-        code: 'ME2018',
-        name: 'Supply Chain Management',
-        credits: 7.5,
+        code: 'ME1316',
+        name: 'Kvantitativ affärs- och verksamhetsanalys',
+        credits: 6.0,
         year: 2
       },
       {
-        code: 'ME2019',
-        name: 'Riskhantering',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'ME2020',
-        name: 'Verksamhetsstrategi',
-        credits: 7.5,
+        code: 'SF1545',
+        name: 'Numeriska metoder, grundkurs',
+        credits: 6.0,
         year: 2
       },
       {
         code: 'SF1633',
         name: 'Differentialekvationer I',
-        credits: 7.5,
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SF1918',
+        name: 'Sannolikhetsteori och statistik',
+        credits: 6.0,
         year: 2
       }
     ],
@@ -1056,21 +1194,33 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
   'CMAST': {
     1: [
       {
-        code: 'SF1625',
-        name: 'Envariabelanalys',
-        credits: 7.5,
+        code: 'DD1310',
+        name: 'Programmeringsteknik',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'MF1001',
+        name: 'Maskinteknik, introduktionskurs',
+        credits: 9.0,
+        year: 1
+      },
+      {
+        code: 'MJ1104',
+        name: 'Praktisk introduktion till energiteknik',
+        credits: 6.0,
         year: 1
       },
       {
         code: 'SF1624',
-        name: 'Algebra och Geometri',
+        name: 'Algebra och geometri',
         credits: 7.5,
         year: 1
       },
       {
-        code: 'DD1331',
-        name: 'Grundläggande Programmering',
-        credits: 5.0,
+        code: 'SF1625',
+        name: 'Envariabelanalys',
+        credits: 7.5,
         year: 1
       },
       {
@@ -1080,109 +1230,91 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
         year: 1
       },
       {
-        code: 'SF1662',
-        name: 'Diskret Matematik',
-        credits: 7.5,
+        code: 'SG1130',
+        name: 'Mekanik I',
+        credits: 9.0,
         year: 1
       },
       {
-        code: 'SF1604',
-        name: 'Linjär Algebra',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'SF1544',
-        name: 'Numeriska Metoder, Grundkurs',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'SF1611',
-        name: 'Introduktionskurs i Matematik I',
+        code: 'SK1110',
+        name: 'Elektromagnetism och vågrörelselära',
         credits: 7.5,
         year: 1
       }
     ],
     2: [
       {
-        code: 'SF1628',
-        name: 'Komplex Analys',
-        credits: 7.5,
+        code: 'MF1016',
+        name: 'Elektroteknik',
+        credits: 9.0,
         year: 2
       },
       {
-        code: 'SF1677',
-        name: 'Analysens Grunder',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1630',
-        name: 'Diskret Matematik',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1901',
-        name: 'Sannolikhetsteori och Statistik',
+        code: 'MF1044',
+        name: 'Maskinkomponenter',
         credits: 6.0,
         year: 2
       },
       {
-        code: 'SF1632',
-        name: 'Kompletterande Kurs i Analys',
-        credits: 7.5,
+        code: 'MG1026',
+        name: 'Tillverkningsteknik',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'MJ1112',
+        name: 'Tillämpad termodynamik',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'SE1010',
+        name: 'Hållfasthetslära, grundkurs med projekt',
+        credits: 12.0,
+        year: 2
+      },
+      {
+        code: 'SF1514',
+        name: 'Numeriska metoder, grundkurs',
+        credits: 6.0,
         year: 2
       },
       {
         code: 'SF1633',
         name: 'Differentialekvationer I',
-        credits: 7.5,
+        credits: 6.0,
         year: 2
       },
       {
-        code: 'SF1640',
-        name: 'Algebraiska Metoder',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1641',
-        name: 'Matematiska Metoder',
-        credits: 7.5,
+        code: 'SG1140',
+        name: 'Mekanik II',
+        credits: 6.0,
         year: 2
       }
     ],
     3: [
       {
-        code: 'SF1642',
-        name: 'Avancerad Analys',
-        credits: 7.5,
+        code: 'ME1003',
+        name: 'Industriell ekonomi, grundkurs',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'SF1643',
-        name: 'Analys i Flera Variabler',
-        credits: 7.5,
+        code: 'MF1045',
+        name: 'Produktframtagning - Konstruktion',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'SF1644',
-        name: 'Topologi',
-        credits: 7.5,
+        code: 'MH1004',
+        name: 'Materiallära',
+        credits: 6.0,
         year: 3
       },
       {
-        code: 'SF1645',
-        name: 'Linjär och Ickelinjär Optimering',
-        credits: 7.5,
-        year: 3
-      },
-      {
-        code: 'SF1691',
-        name: 'Komplex analys',
-        credits: 7.5,
+        code: 'SF1915',
+        name: 'Sannolikhetsteori och statistik',
+        credits: 6.0,
         year: 3
       }
     ]
@@ -1191,100 +1323,118 @@ export const SAMPLE_COURSES: { [key: string]: { [key: number]: Course[] } } = {
     1: [
       {
         code: 'MF1061',
-        name: 'Design and Product Development Introduction',
+        name: 'Introduktion till design och produktframtagning',
+        credits: 9.0,
+        year: 1
+      },
+      {
+        code: 'SF1522',
+        name: 'Numeriska beräkningar',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'SF1624',
+        name: 'Algebra och geometri',
         credits: 7.5,
         year: 1
       },
       {
         code: 'SF1625',
-        name: 'Calculus in One Variable',
+        name: 'Envariabelanalys',
         credits: 7.5,
         year: 1
       },
       {
         code: 'MF1062',
-        name: 'Design and Product Realization Methods',
+        name: 'Design och produktframtagning',
+        credits: 6.0,
+        year: 1
+      },
+      {
+        code: 'SF1523',
+        name: 'Analytiska och numeriska metoder för differentialekvationer',
         credits: 7.5,
         year: 1
       },
       {
         code: 'SF1626',
-        name: 'Calculus in Several Variables',
+        name: 'Flervariabelanalys',
         credits: 7.5,
         year: 1
       },
       {
-        code: 'MF1063',
-        name: 'Design and Product Development Project',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'SF1624',
-        name: 'Algebra and Geometry',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'MF1064',
-        name: 'Design Materials',
-        credits: 7.5,
-        year: 1
-      },
-      {
-        code: 'DD1331',
-        name: 'Fundamentals of Programming',
-        credits: 5.0,
+        code: 'SG1130',
+        name: 'Mekanik I',
+        credits: 9.0,
         year: 1
       }
     ],
     2: [
       {
-        code: 'MF1065',
-        name: 'Design and Innovation',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'MH1000',
-        name: 'Mechanical Engineering',
-        credits: 9.0,
-        year: 2
-      },
-      {
-        code: 'MF1066',
-        name: 'Design for Manufacturing',
-        credits: 7.5,
-        year: 2
-      },
-      {
-        code: 'SF1901',
-        name: 'Probability Theory and Statistics',
+        code: 'MF1039',
+        name: 'Design och produktframtagning, komponenter',
         credits: 6.0,
         year: 2
       },
       {
-        code: 'MF1067',
-        name: 'Computer Aided Design and Manufacturing',
-        credits: 7.5,
+        code: 'MF1063',
+        name: 'Material i design och produktframtagning',
+        credits: 9.0,
         year: 2
       },
       {
-        code: 'MF1068',
-        name: 'Design Visualization',
-        credits: 7.5,
+        code: 'MF1064',
+        name: 'Modellering och simulering i design och produktframtagning',
+        credits: 9.0,
         year: 2
       },
       {
-        code: 'MF1069',
-        name: 'Design Project Management',
-        credits: 7.5,
+        code: 'MG1016',
+        name: 'Tillverkningsteknik',
+        credits: 6.0,
         year: 2
       },
       {
-        code: 'MF1070',
-        name: 'Design Analysis',
-        credits: 7.5,
+        code: 'MJ1112',
+        name: 'Tillämpad termodynamik',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'SD1116',
+        name: 'Konstruktion av tysta och vibrationsfria maskiner',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'SE1020',
+        name: 'Hållfasthetslära, grundkurs',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'SG1140',
+        name: 'Mekanik II',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'ME1003',
+        name: 'Industriell ekonomi, grundkurs',
+        credits: 6.0,
+        year: 2
+      },
+      {
+        code: 'MF1016',
+        name: 'Elektroteknik',
+        credits: 9.0,
+        year: 2
+      },
+      {
+        code: 'MF1040',
+        name: 'Design och produktframtagning, metodik',
+        credits: 9.0,
         year: 2
       }
     ],

@@ -404,9 +404,34 @@ function App() {
                     </Typography>
                   </Box>
                 </Paper>
-              )}
+              )}    
 
+              {/* Foreign Grade Equivalencies Section */}
               <Paper sx={{ p: 3 }}>
+                <Box sx={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: 1,
+                  mb: 2,
+                }}>
+                  <SchoolIcon color="primary" />
+                  <Typography variant="h6">Utländska motsvarigheter</Typography>
+                </Box>
+                <Box sx={{ mb: 2 }}>
+                  <Typography variant="subtitle2" color="primary" sx={{ mb: 1 }}>
+                    United Kingdom (UK)
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'left' }}>
+                    First Class honours 1:1 = 110/180 hp (62%) med betyg A eller B.
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'left' }}>
+                    Upper Second Class honours 2:1 = 90/180 hp (50%) med betyg B.
+                  </Typography>
+                </Box>
+              </Paper>
+
+              {/* Tips Section */}
+              <Paper sx={{ p: 3, mt: 4 }}>
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
