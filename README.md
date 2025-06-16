@@ -1,6 +1,6 @@
 # KTH GPA Calculator
 
-A modern web application for KTH students to calculate their grade point average (GPA). Built with React, TypeScript, and Material-UI.
+A modern web application for KTH students to calculate their grade point average (GPA). Built with React, TypeScript, and Material-UI. Website is available at https://addes4.github.io/GPA-calculator/
 
 ## Features
 
