@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/GPA-calculator/',
+  base: process.env.NODE_ENV === 'production' ? '/GPA-calculator/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
